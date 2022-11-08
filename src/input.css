@@ -1,0 +1,346 @@
+/* open sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/* nunito */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Nunito", sans-serif;
+    @apply bg-primary-white dark:bg-primary-black
+        text-primary-black dark:text-primary-white;
+  }
+
+  body.stopScrolling {
+    @apply h-full overflow-hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+@layer components {
+  .nav {
+    @apply fixed top-0 left-0 z-40
+        bg-white/80 dark:bg-primary-gray/80
+        py-3 md:py-0
+        w-full backdrop-blur;
+  }
+  .nav-menus {
+    @apply fixed md:static top-0 left-0 z-20
+        flex flex-col md:flex-row items-center
+        gap-8 md:gap-12 pt-28 pb-8 md:p-0 w-full
+        md:w-auto bg-white dark:bg-primary-gray
+        md:bg-transparent md:dark:bg-transparent
+        transition duration-500 shadow-lg md:shadow-none;
+  }
+  .nav-link {
+    @apply font-semibold border-b-4 border-transparent
+    hover:border-primary;
+  }
+
+  .home-section {
+    @apply grid items-center
+    grid-cols-1 md:grid-cols-2
+    pt-28 md:pt-0 
+    md:h-screen md:overflow-hidden;
+  }
+  .btn-primary {
+    @apply bg-primary hover:brightness-110
+    font-bold text-white
+    px-4 py-2.5
+    rounded-md shadow-lg;
+  }
+
+  .container-hero-image {
+    @apply bg-slate-400
+    rounded-md md:rounded-none
+    h-60 md:h-full
+    overflow-hidden
+    order-1 md:order-2;
+  }
+
+  .skill {
+    @apply relative
+    flex items-center justify-center
+    bg-white dark:bg-primary-gray
+    w-28 h-28
+    rounded-full cursor-pointer;
+  }
+
+  .skill::before {
+    content: attr(data-text);
+    @apply absolute top-full
+    opacity-100 md:opacity-0
+    w-max px-3 py-2 mt-3
+    bg-white dark:bg-primary-gray
+    rounded md:shadow-md transition;
+  }
+  .skill:hover::before {
+    @apply opacity-100;
+  }
+
+  .portfolio .container {
+    @apply transition duration-200;
+  }
+
+  .portfolio-header {
+    @apply flex flex-wrap
+    items-end justify-between;
+  }
+
+  .portfolio-tittle {
+    @apply pb-4;
+  }
+
+  .filter-btn {
+    @apply inline-block text-slate-900
+    bg-none outline-none border-none
+    cursor-pointer text-xs font-bold md:text-base
+    tracking-wider ml-6
+    uppercase dark:text-white;
+  }
+
+  .filter-btn.mixitup-control-active {
+    @apply text-purple-600;
+  }
+
+  .portfolio-gallery {
+    @apply grid
+    gap-8;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .prt-card {
+    @apply rounded-2xl
+    overflow-hidden
+    bg-white h-64
+    grid dark:bg-primary-gray;
+    grid-template-rows: 1fr auto;
+  }
+
+  .prt-image {
+    @apply relative 
+    overflow-hidden
+    flex items-center
+    justify-center
+    cursor-pointer;
+  }
+
+  .prt-image img {
+    @apply w-full;
+  }
+
+  .prt-desc {
+    @apply px-4 py-4
+    flex justify-between;
+  }
+
+  .prt-desc h3 {
+    @apply text-base
+    text-slate-900 dark:text-slate-300
+    capitalize font-bold;
+  }
+  .prt-desc p {
+    @apply text-base
+    text-slate-900 dark:text-slate-300
+    capitalize font-semibold;
+  }
+
+  .prt-overlay {
+    @apply absolute
+    w-full h-full
+    top-0 left-0
+    bg-transparent
+    backdrop-blur-0
+    flex items-center
+    justify-center
+    pointer-events-none
+    transition duration-200;
+  }
+
+  .prt-image:hover .prt-overlay {
+    @apply pointer-events-auto bg-white/30
+    backdrop-blur;
+  }
+
+  .prt-icon {
+    color: #737373;
+    font-size: 1, 1rem;
+    margin: 0 0.4rem;
+    background-color: #fde047;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: translateY(15px);
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  .prt-icon {
+    @apply hover:bg-yellow-400;
+  }
+
+  .prt-image:hover .prt-icon {
+    @apply opacity-100
+    translate-y-0;
+  }
+
+  .modal {
+    @apply fixed top-0
+    left-0 w-screen
+    h-screen overflow-hidden
+    z-10 pointer-events-none;
+  }
+
+  .modal-overlay {
+    @apply absolute w-full
+    h-full top-0 left-0
+    bg-slate-900/80
+    opacity-0 transition duration-200;
+  }
+
+  .slider-wrap {
+    @apply absolute top-1/2
+    left-1/2
+    w-[90%]
+    max-w-[900px] grid items-center justify-items-center
+    opacity-0 transition duration-200;
+    grid-template-columns: 100px 1fr 100px;
+    transform: translate(-50%, calc(-50% + 400px));
+  }
+
+  .slider-wrap img {
+    @apply w-full
+    hidden rounded-md;
+  }
+
+  .navigation {
+    @apply text-white
+    text-4xl cursor-pointer
+    p-8;
+  }
+
+  .slider-wrap img.showImage {
+    @apply block;
+  }
+
+  .portfolio.open .modal {
+    @apply pointer-events-auto;
+  }
+
+  .portfolio.open .modal-overlay {
+    @apply opacity-[1];
+  }
+
+  .portfolio.open .container {
+    transform: scale(0.9);
+  }
+
+  .portfolio.open .slider-wrap {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: 0.45s 0.1s;
+  }
+
+  .contact .container {
+    @apply grid grid-cols-1 md:grid-cols-2;
+    columns-gap: 4rem;
+  }
+
+  .mail {
+    transition: 0.3s;
+  }
+
+  .mail i {
+    @apply inline-block text-base;
+    margin-left: 2px;
+    transition: 0.3s margin-left;
+    transform: translate(3px);
+  }
+
+  .mail:hover {
+    @apply text-purple-600
+    dark:text-purple-600;
+  }
+
+  .mail:hover i {
+    margin-left: 10px;
+  }
+
+  .contact-form {
+    @apply bg-white rounded-md
+    flex flex-col dark:bg-primary-gray;
+    padding: 3.5rem 3rem;
+  }
+
+  .contact-form h3 {
+    @apply text-primary-black dark:text-primary-white
+    text-xl font-bold
+    mb-4;
+    line-height: 0.9;
+  }
+  .form-input:valid,
+  .form-input {
+    @apply inline-block bg-purple-500/50 
+    border-purple-500/80 w-full
+    rounded-xl font-semibold text-base text-primary-black
+    outline-none transition duration-200
+    focus:ring-1 focus:ring-purple-700 focus:border-purple-700;
+    padding: 0.9rem 1.5rem;
+  }
+
+  .form-input:hover {
+    @apply brightness-110;
+  }
+
+  .form-input::placeholder {
+    @apply text-slate-300;
+  }
+
+  textarea.form-input {
+    resize: none;
+    min-height: 170px;
+  }
+
+  .contact-form .form-input {
+    @apply mb-5;
+  }
+
+  @media (max-width: 354px) {
+    .portfolio-gallery {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .prt-card {
+      @apply h-full;
+    }
+  }
+  @media (max-width: 259px) {
+    .portfolio-gallery {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .prt-card {
+      @apply h-full;
+    }
+    .prt-desc p {
+      @apply pl-2;
+    }
+  }
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link href="dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+
+<body>
+
+    <!-- navbar star -->
+    <nav class="nav">
+        <div class="container flex items-center justify-between h-16 md:h-20">
+            <h1 class="relative z-30 font-semibold text-2xl">FM</h1>
+            <div class="flex items-center flex-row-reverse md:flex-row gap-3 md:gap-12">
+
+                <ul id="menu" class="nav-menus translate-y-[-200%] md:translate-y-0">
+                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                </ul>
+
+                <!-- mobile -->
+                <button id="toggle-menu" class="relative z-30 p-2 md:hidden dark:invert">
+                    <img src="dist/img/icon-menu.svg" alt="menu">
+                </button>
+
+                <!-- toggle theme -->
+                <button id="toggle-theme" class="relative z-30 dark:invert">
+                    <img src="dist/img/icon-dark.svg" alt="theme" class="md:opacity-70 w-7 md:-mt-1">
+                </button>
+
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- main star -->
+
+    <main class="container">
+
+        <!-- HERO star -->
+        <section id="home" class="home-section lg:mx-12">
+            <div class="hero-text order-2 md:order-1 mt-10">
+                <h2 class="text-5xl md:text-7xl font-bold">
+                    Hi
+                </h2>
+                <h2 class="text-5xl md:text-7xl font-bold mt-2">I am <span class="text-primary">Fuad</span></h2>
+                <h3 class="text-2xl md:text-3xl font-bold opacity-70 mt-5 mb-10">Frontend Developer</h3>
+
+                <a href="#" class="btn-primary mr-3">Se my work</a>
+
+                <!-- social -->
+                <div class="flex items-center">
+                    <a href="https://www.instagram.com/ad_mnj/" target="-blank"
+                        class="contact-link w-10 h-10 mr-3 mt-10  rounded-full flex justify-center items-center border border-slate-500 text-slate-500 fill-current hover:border-primary hover:bg-primary hover:text-white">
+                        <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Instagram</title>
+                            <path
+                                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Fuadstar" target="-blank"
+                        class="contact-link w-10 h-10 mr-3 mt-10 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 fill-current hover:border-primary hover:bg-primary hover:text-white">
+                        <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>GitHub</title>
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="container-hero-image">
+                <img src="dist/img/ADX.png" alt="ad" class="w-full h-full object-cover opacity-90 object-center">
+            </div>
+        </section>
+
+        <!-- about star -->
+        <section id="about" class="py-32">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20">
+                <div data-aos="fade-right" data-aos-duration="1000"
+                    class="w-48 h-48 md:w-60 md:h-60 rounded-lg bg-gradient-to-tr from-sky-500 group">
+                    <div
+                        class="w-48 h-48 md:w-60 md:h-60 overflow-hidden bg-primary rounded-lg rotate-12 hover:rotate-0 transition duration-500">
+                        <img src="dist/img/adf.jpg" alt="ad">
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400"
+                    class="w-full md:w-1/2 text-base md:text-lg text-center md:text-left">
+                    <h2 class="text-primary font-bold text-2xl md:text-3xl mb-3">
+                        Hi, I'm Fuad
+                    </h2>
+                    <p class="folio mb-3 opacity-80">I'm a front-end developer. I have had experience on the front end
+                        for six
+                        months, and there are already several projects that I have completed.</p>
+                    <p class="folio opacity-80">I graduated from high school at one of the schools in my area. Even
+                        though I'm
+                        just a high school graduate, I really like programming. Why do I like programming? Because of
+                        programming, I learned discipline and how to obey the rules, because in programming there are
+                        rules that must be implemented.</p>
+                </div>
+            </div>
+
+            <!-- my skil -->
+            <div class="mt-32 text-center">
+                <h2 data-aos="fade-down" data-aos-duration="1000"
+                    class="text-primary text-3xl md:text-4xl font-bold mb-14">My Skills</h2>
+                <div class="flex flex-wrap items-center justify-center gap-24 md:gap-12">
+                    <div data-aos="flip-up" data-aos-duration="2000" data-aos-delay="100" class="skill"
+                        data-text="HTML">
+                        <img class="w-16" src="dist/img/skill/icons8-html-5-480.png" alt="html">
+                    </div>
+                    <div data-aos="flip-down" data-aos-duration="2000" data-aos-delay="200" class="skill"
+                        data-text="CSS">
+                        <img class="w-16" src="dist/img/skill/icons8-css3-480.png" alt="css">
+                    </div>
+                    <div data-aos="flip-up" data-aos-duration="2000" data-aos-delay="300" class="skill"
+                        data-text="BOOTSTRAP">
+                        <img class="w-16" src="dist/img/skill/bootstrap-logo.png" alt="bootstrap">
+                    </div>
+                    <div data-aos="flip-down" data-aos-duration="2000" data-aos-delay="400" class="skill"
+                        data-text="TAILWINDCSS">
+                        <img class="w-16" src="dist/img/skill/tailwind-css-logo-5AD4175897-seeklogo.com.png"
+                            alt="tailwindcss">
+                    </div>
+                    <div data-aos="flip-up" data-aos-duration="2000" data-aos-delay="500" class="skill"
+                        data-text="JAVASRIPT">
+                        <img class="w-16" src="dist/img/skill/javascript-logo-transparent-logo-javascript-images-3.png"
+                            alt="js">
+                    </div>
+                </div>
+            </div>
+            <!-- skill end -->
+
+        </section>
+        <!-- about end -->
+
+        <!-- dot -->
+        <div data-aos="fade-right" data-aos-duration="2000" class="flex items-center justify-between gap-3 w-full">
+            <div class="bg-primary/60 h-3 w-4"></div>
+            <div class="bg-primary/60 h-3 w-4"></div>
+            <div class="bg-primary/60 h-3 w-4"></div>
+            <div class="bg-primary/60 h-3 w-4"></div>
+            <div class="bg-primary/60 h-3 w-4"></div>
+            <div class="bg-primary/60 h-3 w-4"></div>
+            <div class="bg-primary/60 h-3 w-4"></div>
+            <div class="bg-gradient-to-r from-primary/60 to-primary/0 flex-grow h-3"></div>
+        </div>
+
+        <!-- portfolio -->
+        <section id="portfolio" class="portfolio section mt-32 pt-20">
+            <div class="modal">
+                <div class="modal-overlay"></div>
+                <div class="slider-wrap">
+                    <div class="prev-btn navigation">
+                        <i class="uil uil-angle-left"></i>
+                    </div>
+                    <div class="images">
+                        <img class="showImage" src="dist/img/projecl/landing1-min.jpg">
+                        <img src="dist/img/projecl/lending2.jpg">
+                        <img src="dist/img/projecl/lamding3.jpg">
+                    </div>
+                    <div class="next-btn navigation">
+                        <i class="uil uil-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="portfolio-header mb-14">
+                    <div data-aos="fade-right" data-aos-duration="2000" class="portfolio-tittle">
+                        <h3 class="text-xl md:text-2xl font-bold opacity-70">Portfolio</h3>
+                        <h1 class="text-4xl md:text-5xl font-bold mt-4">Latest Projects</h1>
+                    </div>
+                </div>
+                <div class="portfolio-gallery">
+                    <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="200" class="mix prt-card lp">
+                        <div class="prt-image">
+                            <img src="dist/img/projecl/landing1-min.jpg" alt="lap">
+                            <div class="prt-overlay">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
+                                    <i class="uil uil-search-plus"></i>
+                                </span>
+                                <a href="#" class="prt-icon" style="--i: .15s">
+                                    <i class="uil uil-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="prt-desc">
+                            <h3 class="">Landing page</h3>
+                            <p class="">Html <br> Tailwindcss JavaSript</p>
+                        </div>
+                    </div>
+                    <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="200" class="mix prt-card lp">
+                        <div class="prt-image">
+                            <img src="dist/img/projecl/lending2-min.jpg" alt="lap">
+                            <div class="prt-overlay">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
+                                    <i class="uil uil-search-plus"></i>
+                                </span>
+                                <a href="#" class="prt-icon" style="--i: .15s">
+                                    <i class="uil uil-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="prt-desc">
+                            <h3 class="">Landing page</h3>
+                            <p class="">Html Css JavaSript</p>
+                        </div>
+                    </div>
+                    <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="200" class="mix prt-card pc">
+                        <div class="prt-image">
+                            <img src="dist/img/projecl/lamding3-min.jpg" alt="lap">
+                            <div class="prt-overlay">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
+                                    <i class="uil uil-search-plus"></i>
+                                </span>
+                                <a href="#" class="prt-icon" style="--i: .15s">
+                                    <i class="uil uil-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="prt-desc">
+                            <h3 class="">Company Profile</h3>
+                            <p class="">Html Css JavaSript</p>
+                            <a href="https://www.freepik.com/free-vector/corporate-website-landing-page_5458427.htm#query=flat%20landing%20page&position=13&from_view=search&track=sph"
+                                class="hover:text-purple-600">Freepik</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- contact -->
+        <section id="contact" class="contact section mt-32 pt-20">
+            <div class="container">
+                <div data-aos="fade-right" data-aos-duration="2000" class="contact-info mb-8 md:mb-0">
+                    <h3 class="sub-heading text-xl font-bold text-primary-gray mb-10 md:text-2xl dark:text-slate-400">
+                        contact me</h3>
+                    <h1 class="heading text-3xl font-bold text-primary-black mb-8 md:text-4xl dark:text-slate-300">Let's
+                        work together</h1>
+                    <a class="mail text-base font-semibold text-slate-600 md:text-lg dark:text-slate-200"
+                        href="https://m.me/adrian.ling.777">adrian.ling<i class="uil uil-arrow-right"></i></a>
+                </div>
+
+                <form data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300" id="contact-form"
+                    action="https://formspree.io/f/mnqroezq" method="POST" action="index.html" class="contact-form">
+                    <h3 class="">Send me message</h3>
+                    <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+                    <input type="email" name="email" class="form-input" placeholder="Email id" required>
+                    <textarea placeholder="Detail" name="project" class="form-input" required></textarea>
+                    <input type="submit" value="send" class="btn-primary">
+
+                    <div
+                        class="loader ease-linear mt-5 rounded-full border-4 border-t-4 border-gray-200 h-6 w-6 mx-auto border-t-blue-600 animate-spin">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full text-center mt-40 bg-primary-black">
+        <div class="container">
+            <div class="flex items-center justify-center mb-5 pt-10">
+                <a href="https://www.instagram.com/ad_mnj/" target="_blank"
+                    class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                    <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>Instagram</title>
+                        <path
+                            d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/Fuadstar" target="-blank"
+                    class="contact-link w-9 h-9 rounded-full flex justify-center items-center border border-slate-500 text-slate-300 fill-current hover:border-primary hover:bg-primary hover:text-white">
+                    <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>GitHub</title>
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                </a>
+            </div>
+            <div class="w-full pt-10 border-t border-slate-600 flex items-center justify-center"></div>
+        </div>
+        <p class="font-medium text-xs text-slate-500 text-center pb-8">Made With <span class="text-pink-500">❤</span> by
+            <span class="font-bold text-primary">Fuad</span> uses <a href="https://tailwindcss.com" target="_blank"
+                class="font-bold text-sky-500">Tailwind CSS</a></p>
+    </footer>
+
+
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+        gsap.from('.container-hero-image', {
+            duration: 1.5,
+            y: -800,
+            opacity: 0
+        });
+        gsap.from('.hero-text', {
+            duration: 1.5,
+            y: 800,
+            opacity: 0
+        });
+    </script>
+
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="dist/js/mixitup.min.js"></script>
+    <script src="dist/js/script.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
